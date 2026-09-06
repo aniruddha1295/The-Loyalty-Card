@@ -1,8 +1,10 @@
+import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  agentRules: false,
+  reactStrictMode: true,
+  serverExternalPackages: ["better-sqlite3"],
+  outputFileTracingRoot: path.join(__dirname),
 };
 
 export default nextConfig;
